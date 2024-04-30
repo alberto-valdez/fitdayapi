@@ -1,0 +1,18 @@
+{
+  "name": "fitdaycounter",
+  "version": "1.0.0",
+  "description": "A user-friendly calorie counter application to help you track your daily calorie intake and manage your weight.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "calorie counter",
+    "health",
+    "fitness",
+    "nutrition",
+    "diet"
+  ],
+  "author": "AlbertoValdez",
+  "license": "ISC"
+}
