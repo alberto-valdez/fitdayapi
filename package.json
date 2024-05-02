@@ -4,7 +4,10 @@
   "description": "A user-friendly calorie counter application to help you track your daily calorie intake and manage your weight.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "tsc": "tsc",
+    "dev": "ts-node-dev src/index.js"
   },
   "keywords": [
     "calorie counter",
@@ -14,5 +17,14 @@
     "diet"
   ],
   "author": "AlbertoValdez",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "5.4.5"
+  },
+  "dependencies": {
+    "@types/express": "4.17.21",
+    "express": "4.19.2"
+  }
 }
