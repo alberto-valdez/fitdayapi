@@ -3,6 +3,6 @@ import { createEdible } from '../controllers/edibles'
 
 const router = express.Router()
 
-router.get('/create', createEdible)
+router.post('/create', createEdible)
 
 export default router
