@@ -8,11 +8,11 @@ export const createEdible = (req: Request, res: Response): any => {
     if (!err.isEmpty()) {
       const errorData: FieldValidationError[] = err.array()
       const pathMessage: string = errorData[0].path
-      res.status(404).send(`Invalid or missing value ${pathMessage}`)
+      return res.status(404).send(`Invalid or missing value ${pathMessage}`)
     }
     const data = handleCreateEdible(req.body)
-    res.send(data)
+    return res.send(data)
   } catch (error) {
-    res.status(500).send('Something went wrong')
+    return res.status(500).send('Something went wrong')
   }
 }

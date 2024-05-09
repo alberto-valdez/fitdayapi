@@ -21,10 +21,8 @@ export interface edible {
   sugar: number
 }
 
-export interface FieldValidationError {
-  type: string
-  location: string
-  path: string
-  value: any
-  msg: any
+export interface MongoDbSettings {
+  user: string
+  password: string
+  nameDb: string
 }
