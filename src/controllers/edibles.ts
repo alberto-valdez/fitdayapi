@@ -1,6 +1,7 @@
 import { Response, Request } from 'express'
 import { handleCreateEdible } from '../services/edibles'
 import { FieldValidationError, Result, validationResult } from 'express-validator'
+import { edible } from '../type'
 
 export const createEdible = (req: Request, res: Response): any => {
   try {
@@ -10,9 +11,10 @@ export const createEdible = (req: Request, res: Response): any => {
       const pathMessage: string = errorData[0].path
       return res.status(404).send(`Invalid or missing value ${pathMessage}`)
     }
-    const data = handleCreateEdible(req.body)
+    const data: edible = handleCreateEdible(req.body)
     return res.send(data)
-  } catch (error) {
-    return res.status(500).send('Something went wrong')
+  } catch (error: any) {
+    console.log(error)
+    return res.status(500).send(error.message)
   }
 }

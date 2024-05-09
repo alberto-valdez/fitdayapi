@@ -1,4 +1,5 @@
 import { body } from 'express-validator'
+import { unit } from './type'
 
 export const edibleValidator = [
   body('name').isString(),
@@ -11,3 +12,8 @@ export const edibleValidator = [
   body('fiber').isString(),
   body('sugar').isString()
 ]
+
+export const isUnit = (data: any): boolean => {
+  const result = Object.values(unit).includes(data)
+  return result
+}
