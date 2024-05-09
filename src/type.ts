@@ -20,3 +20,11 @@ export interface edible {
   fiber: number
   sugar: number
 }
+
+export interface FieldValidationError {
+  type: string
+  location: string
+  path: string
+  value: any
+  msg: any
+}
